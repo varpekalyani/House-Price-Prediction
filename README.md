@@ -1,201 +1,167 @@
-# 🏠 House Price Prediction using Linear Regression
+# 🏠 House Price Prediction using Machine Learning
 
 ## 📌 Project Overview
 
-The **House Price Prediction** project is a Machine Learning application that predicts the price of a house based on various housing features such as median income, house age, average rooms, population, and geographical location.
+This project focuses on predicting house prices using Machine Learning techniques. The objective is to analyze housing data, identify the factors that influence property prices, and build predictive models capable of estimating house values accurately.
 
-The project uses the **Linear Regression** algorithm from Scikit-learn and provides an **interactive Streamlit web application** where users can input house details and instantly get the predicted house price.
-
----
-
-## 🎯 Objective
-
-To build a regression model that predicts house prices using numerical features from a housing dataset and deploy it as a user-friendly web application.
+The project was completed as part of a Machine Learning Internship assignment and covers the complete data science workflow, including data exploration, cleaning, visualization, model building, evaluation, and business insights.
 
 ---
 
-## 🚀 Features
+## 🎯 Problem Statement
 
-* 📊 Interactive Streamlit interface
-* 🏠 Predict house prices in real time
-* 📋 View the housing dataset
-* 📈 Display summary statistics
-* 🔍 Explore feature correlations
-* 📏 Data preprocessing using StandardScaler
-* 🤖 Linear Regression model for prediction
-* ⚡ Simple and beginner-friendly implementation
+Real estate buyers and sellers often struggle to estimate a property's fair value accurately. This project aims to develop a machine learning model that predicts house prices based on various property features such as area, bedrooms, bathrooms, parking availability, furnishing status, and other amenities.
+
+---
+
+## 📂 Dataset
+
+Dataset: Housing Prices Dataset
+
+The dataset contains information about residential properties, including:
+
+* Price (Target Variable)
+* Area
+* Bedrooms
+* Bathrooms
+* Stories
+* Main Road Access
+* Guest Room Availability
+* Basement Availability
+* Hot Water Heating
+* Air Conditioning
+* Parking
+* Preferred Area
+* Furnishing Status
 
 ---
 
 ## 🛠️ Technologies Used
 
-* Python
-* Streamlit
+* Python 3
+* Jupyter Notebook
 * Pandas
-* Scikit-learn
 * NumPy
+* Scikit-learn
+* Matplotlib
+* Seaborn
 
 ---
 
-## 📂 Project Structure
+## 📋 Project Tasks
 
+### Task 1: Data Loading & Exploration
+
+* Loaded dataset using Pandas
+* Displayed first 10 records
+* Checked dataset dimensions
+* Identified target and feature columns
+* Checked missing values
+
+### Task 2: Data Cleaning
+
+* Removed duplicate records
+* Handled missing values
+* Applied One-Hot Encoding to categorical features
+* Prepared dataset for machine learning
+
+### Task 3: Model Building
+
+Two regression models were implemented:
+
+#### Linear Regression
+
+* Trained using 80/20 train-test split
+* Evaluated using MAE, RMSE, and R² Score
+
+#### Random Forest Regressor
+
+* Trained and evaluated on the same dataset
+* Compared performance against Linear Regression
+
+### Task 4: Data Visualization
+
+Generated visualizations including:
+
+* House Price Distribution Histogram
+* Correlation Heatmap
+* Actual vs Predicted Price Scatter Plot
+
+### Task 5: Insights & Summary
+
+* Identified key features influencing house prices
+* Compared model performance
+* Derived business recommendations
+
+---
+
+## 📊 Evaluation Metrics
+
+The models were evaluated using:
+
+* Mean Absolute Error (MAE)
+* Root Mean Squared Error (RMSE)
+* R² Score
+
+These metrics help measure prediction accuracy and model performance.
+
+---
+
+## 📈 Key Findings
+
+* Property area was one of the strongest indicators of house price.
+* Amenities such as air conditioning and preferred area significantly impacted pricing.
+* Random Forest Regressor outperformed Linear Regression in predictive accuracy.
+* Location and property features play a major role in determining market value.
+
+---
+
+## 📁 Project Structure
+
+```text
+HousePricePrediction/
+
+├── analysis.ipynb
+├── Housing.csv
+├── charts/
+│   ├── price_distribution.png
+│   ├── correlation_heatmap.png
+│   └── actual_vs_predicted.png
+├── summary.pdf
+├── requirements.txt
+└── README.md
 ```
-House-Price-Prediction/
-│── data/
-│   └── housing.csv
-│── house_prediction.py
-│── house_price_prediction.py
-│── README.md
-│── requirements.txt
-```
 
----
+## 🚀 How to Run
 
-## 📊 Dataset
-
-This project uses the **California Housing Dataset** provided by **Scikit-learn**.
-
-### Features
-
-| Feature    | Description                |
-| ---------- | -------------------------- |
-| MedInc     | Median income              |
-| HouseAge   | Median age of houses       |
-| AveRooms   | Average number of rooms    |
-| AveBedrms  | Average number of bedrooms |
-| Population | Population in the area     |
-| AveOccup   | Average occupancy          |
-| Latitude   | Latitude coordinate        |
-| Longitude  | Longitude coordinate       |
-
-### Target Variable
-
-* **PRICE** – Predicted median house value
-
----
-
-## ⚙️ Machine Learning Workflow
-
-1. Load the dataset
-2. Split data into features and target
-3. Divide data into training and testing sets
-4. Normalize features using `StandardScaler`
-5. Train the Linear Regression model
-6. Make predictions
-7. Display predicted house prices through Streamlit
-
----
-
-## 📥 Installation
-
-### Clone the repository
+1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/House-Price-Prediction.git
+git clone <repository-url>
 ```
 
-### Move to the project directory
+2. Navigate to the project folder
 
 ```bash
-cd House-Price-Prediction
+cd HousePricePrediction
 ```
 
-### Install dependencies
+3. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
----
-
-## ▶️ Run the Application
-
-Start the Streamlit app using:
+4. Open and run
 
 ```bash
-python -m streamlit run house_prediction.py
+jupyter notebook analysis.ipynb
 ```
-
-The application will open automatically in your default web browser.
-
----
-
-## 💻 How to Use
-
-1. Launch the Streamlit application.
-2. Enter house details from the sidebar:
-
-   * Median Income
-   * House Age
-   * Average Rooms
-   * Average Bedrooms
-   * Population
-   * Average Occupancy
-   * Latitude
-   * Longitude
-3. View the predicted house price instantly.
-4. Optionally:
-
-   * Display the dataset
-   * View summary statistics
-   * Explore the correlation matrix
-
----
-
-## 📊 Model
-
-**Algorithm Used:** Linear Regression
-
-The model is trained after:
-
-* Splitting the dataset into training and testing sets
-* Normalizing features using `StandardScaler`
-* Fitting the data using `LinearRegression()`
-
----
-
-## 📷 Application Features
-
-* 🏠 House Price Prediction
-* 📋 Dataset Viewer
-* 📈 Statistical Summary
-* 🔗 Correlation Matrix
-* ⚡ Fast Predictions with Streamlit
-
----
-
-## 🎓 Skills Demonstrated
-
-* Data Preprocessing
-* Feature Scaling
-* Regression Analysis
-* Machine Learning Model Training
-* Data Visualization
-* Streamlit Web Application Development
-* Python Programming
-
----
-
-## 🔮 Future Improvements
-
-* Save the trained model using Joblib
-* Add Random Forest and Decision Tree regression models
-* Compare multiple algorithms
-* Improve UI with charts and visualizations
-* Deploy the application online using Streamlit Community Cloud or Render
-* Add prediction history and downloadable reports
 
 ---
 
 ## 👩‍💻 Author
 
-**Kalyani Varpe**
+Kalyani Varpe
 
-* GitHub: https://github.com/varpekalyani
-* LinkedIn: https://linkedin.com/in/kalyani-varpe-7724a6319
-
----
-
-## 📄 License
-
-This project is developed for educational and learning purposes. You are free to use, modify, and extend it for personal or academic projects.
+Machine Learning Internship Project
