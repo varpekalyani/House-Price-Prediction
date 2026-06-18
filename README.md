@@ -121,13 +121,12 @@ These metrics help measure prediction accuracy and model performance.
 ```text
 HousePricePrediction/
 
-├── analysis.ipynb
+├── house_price_prediction.ipynb
 ├── Housing.csv
 ├── charts/
 │   ├── price_distribution.png
 │   ├── correlation_heatmap.png
 │   └── actual_vs_predicted.png
-├── summary.pdf
 ├── requirements.txt
 └── README.md
 ```
